@@ -7,12 +7,33 @@ ApplicationWindow {
 
   title: Qt.application.name
 
+  visible: true
   width: 640
   height: 480
-  visible: true
+
+  Pane {
+    anchors.centerIn: parent
+    Material.elevation: 6
+
+    Column {
+      RadioButton {
+        text: qsTr("Small")
+      }
+      RadioButton {
+        Material.accent: "green"
+        text: qsTr("Medium")
+        checked: true
+      }
+      RadioButton {
+        Material.background: "red"
+        text: qsTr("Large")
+      }
+    }
+  }
 
   InputPanel {
-    id: inputPanel
+    id: keyboard
+
     z: 99
     x: 0
     y: window.height
@@ -20,12 +41,13 @@ ApplicationWindow {
 
     states: State {
       name: "visible"
-      when: inputPanel.active
+      when: keyboard.active
       PropertyChanges {
-        target: inputPanel
-        y: window.height - inputPanel.height
+        target: keyboard
+        y: window.height - keyboard.height
       }
     }
+
     transitions: Transition {
       from: ""
       to: "visible"

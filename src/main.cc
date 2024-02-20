@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.loadFromModule("QtQuickQuests_Main", "Main");
+    engine.loadFromModule("QtQuickQuests_Module", "Main");
 
     return app.exec();
 }

@@ -10,7 +10,7 @@ This project explores the capabilities of the Qt Quick framework, focusing on dy
 
 ## Requirements
 - Qt Quick Framework 6.7
-- CMake (version 3.20)
+- CMake (version 3.21)
 
 ## LICENSE
 This project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute it as per the terms of the license.
