@@ -6,6 +6,10 @@ int main(int argc, char *argv[]) {
 
     QGuiApplication app(argc, argv);
 
+    QCoreApplication::setApplicationName(QString::fromUtf8(PROJECT_NAME));
+    QCoreApplication::setOrganizationName("QtProject");
+    QCoreApplication::setApplicationVersion(QString::fromUtf8(PROJECT_VERSION));
+
     QQmlApplicationEngine engine;
 
     engine.addImportPath(":/astrodynamic.com/imports");

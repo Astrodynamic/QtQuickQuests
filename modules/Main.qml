@@ -5,7 +5,7 @@ import QtQuick.VirtualKeyboard
 ApplicationWindow {
   id: window
 
-  title: Qt.application.name
+  title: Qt.application.name + " " + Qt.application.version
 
   visible: true
   width: 640
