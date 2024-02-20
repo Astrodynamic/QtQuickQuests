@@ -11,26 +11,6 @@ ApplicationWindow {
   width: 640
   height: 480
 
-  Pane {
-    anchors.centerIn: parent
-    Material.elevation: 6
-
-    Column {
-      RadioButton {
-        text: qsTr("Small")
-      }
-      RadioButton {
-        Material.accent: "green"
-        text: qsTr("Medium")
-        checked: true
-      }
-      RadioButton {
-        Material.background: "red"
-        text: qsTr("Large")
-      }
-    }
-  }
-
   InputPanel {
     id: keyboard
 
