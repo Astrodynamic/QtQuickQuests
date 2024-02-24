@@ -6,7 +6,8 @@ set_target_properties(BasicLib
 )
 
 target_link_libraries(BasicLib
-  PRIVATE Qt6::Quick
+  PRIVATE
+  Qt6::Quick
 )
 
 list(APPEND MODULE_QML_FILES
