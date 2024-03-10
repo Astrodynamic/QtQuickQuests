@@ -2,14 +2,21 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.VirtualKeyboard
 
-ApplicationWindow {
+import Cobot
+
+Window {
   id: window
 
   title: Qt.application.name + " " + Qt.application.version
 
+  flags: Qt.FramelessWindowHint | Qt.Window
+  visibility: Qt.WindowFullScreen
   visible: true
-  width: 640
-  height: 480
+
+  StackView {
+    anchors.fill: parent
+    initialItem: CobotScene {}
+  }
 
   InputPanel {
     id: keyboard

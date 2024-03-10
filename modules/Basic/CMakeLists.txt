@@ -5,9 +5,8 @@ set_target_properties(BasicLib
   AUTOMOC ON
 )
 
-target_link_libraries(BasicLib
-  PRIVATE
-  Qt6::Quick
+find_package(Qt6 6.7 REQUIRED COMPONENTS
+    Quick
 )
 
 list(APPEND MODULE_QML_FILES
@@ -30,4 +29,9 @@ qt_add_qml_module(BasicLib
     QML_FILES
         ${MODULE_QML_FILES}
         ${MODULE_JS_FILES}
+)
+
+target_link_libraries(BasicLib
+  PRIVATE
+  Qt6::Quick
 )

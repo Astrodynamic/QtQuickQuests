@@ -17,15 +17,15 @@ qt_add_executable(${PROJECT_NAME}
 
 qt_add_resources(${PROJECT_NAME} "configuration"
     PREFIX "/"
-    BASE configuration
+    BASE assets/configuration
     FILES
-        configuration/qtquickcontrols2.conf
+        assets/configuration/qtquickcontrols2.conf
 )
 
 qt_add_translations(${PROJECT_NAME}
     TS_FILES
-        data/translations/i18n_ru.ts
-        data/translations/i18n_en.ts
+        assets/translations/i18n_ru.ts
+        assets/translations/i18n_en.ts
     LUPDATE_OPTIONS
         -no-obsolete
     LRELEASE_OPTIONS

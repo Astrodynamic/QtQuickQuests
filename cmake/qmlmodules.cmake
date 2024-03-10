@@ -11,11 +11,6 @@ add_subdirectory(modules)
 
 set(QML_IMPORT_PATH
     ${CMAKE_BINARY_DIR}/modules
+    ${CMAKE_BINARY_DIR}/modules/Components
     CACHE STRING "" FORCE
 )
-
-target_link_libraries(${PROJECT_NAME}
-    PRIVATE
-    BasicLibplugin
-)
-
